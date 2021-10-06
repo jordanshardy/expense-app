@@ -1,3 +1,3 @@
 ### Expenses Tracking App
 
-This is a basic expenses tracking app I'm learning as part of a Udemy course along side my diploma.
+This is a basic expenses tracking app I'm learning as a side project while at Coder Academy
