@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 
+//Using array desctructuring with an entered variable/funciton and a set variable/function and saving it to the useState function
 const ExpenseForm = () => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
@@ -12,6 +13,7 @@ const ExpenseForm = () => {
   //   enteredDate: ''
   // })
 
+  // function to change the form title input on an event to the setEnteredTitle value
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
     // setUserInput({
@@ -39,6 +41,8 @@ const ExpenseForm = () => {
     // });
   };
 
+  // function to submit the data from the form to the return or console but setting the expense data object to the keys
+  // and values listed, while resetting the form fields to empty strings
   const submitHandler = (event) => {
     event.preventDefault();
 
@@ -47,9 +51,9 @@ const ExpenseForm = () => {
       amount: enteredAmount,
       date: new Date(enteredDate),
     };
-    setEnteredTitle('')
-    setEnteredAmount('')
-    setEnteredDate('')
+    setEnteredTitle("");
+    setEnteredAmount("");
+    setEnteredDate("");
   };
 
   return (
@@ -57,10 +61,11 @@ const ExpenseForm = () => {
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input 
-            type="text" 
+          <input
+            type="text"
             value={enteredTitle}
-            onChange={titleChangeHandler}></input>
+            onChange={titleChangeHandler}
+          ></input>
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
